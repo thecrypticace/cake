@@ -1,0 +1,22 @@
+{
+  "extends": "standard",
+  "env": {
+    "browser": true,
+  },
+  "rules": {
+    "no-unused-vars": ["warn"],
+    "no-return-assign": ["off"],
+    "arrow-parens": ["error", "as-needed"],
+    "quotes": ["error", "double", "avoid-escape"],
+    "comma-dangle": ["error", "always-multiline"],
+    "space-before-function-paren": ["error", "never"],
+    "operator-linebreak": ["error", "before"],
+    "space-unary-ops": ["error", {
+      "words": true,
+      "nonwords": false,
+      "overrides": {
+        "!": true,
+      },
+    }],
+  },
+}
