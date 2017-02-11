@@ -19,6 +19,7 @@ const app = new Vue({
   el: '#app',
   data() {
     return {
+      advanced: false,
       precision: 3,
       totalDays: 365,
       totalPeople: 23,
@@ -43,6 +44,10 @@ const app = new Vue({
   },
 
   methods: {
+    toggleAdvancedOptions() {
+      this.advanced = ! this.advanced
+    },
+
     compute() {
       let exponent = (Math.pow(this.totalPeople, 2) - this.totalPeople) / (2 * this.totalDays)
 
