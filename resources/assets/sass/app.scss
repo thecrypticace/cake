@@ -29,3 +29,11 @@ html, body {
 .panel {
     width: 50%;
 }
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+.panel:last-child {
+    margin-bottom: 0;
+}

@@ -10,7 +10,7 @@
         </div>
 
         <div class="panel-body">
-            <div class="form-group" v-show="false">
+            <div class="form-group" v-if="false">
                 <label for="" class="control-label">Shared Birthdays</label>
                 <input type="text" class="form-control" v-model="sharedBirthdays">
             </div>
@@ -22,7 +22,7 @@
                 <label for="" class="control-label">Number of Days</label>
                 <input type="text" class="form-control" v-model="totalDays">
             </div>
-            <div class="form-group" v-show="advanced">
+            <div class="form-group" v-if="advanced">
                 <label for="" class="control-label">Precision</label>
                 <input type="text" class="form-control" v-model="precision">
             </div>
