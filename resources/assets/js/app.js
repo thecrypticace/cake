@@ -13,29 +13,40 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+ import Vue from "vue"
+
 const app = new Vue({
   el: '#app',
   data() {
     return {
-      sharedBirthdays: 2,
-      totalPeople: 23,
+      precision: 3,
       totalDays: 365,
+      totalPeople: 23,
+      sharedBirthdays: 2,
     }
   },
 
   computed: {
-    exponent() {
-      return Math.pow(this.totalPeople, 2) / ( 2 * this.totalDays)
+    probability() {
+      let probability = 100 * this.compute()
+
+      if (isNaN(probability) || ! isFinite(probability)) {
+        return 0
+      }
+
+      return probability
     },
 
-    probability() {
-      return `${(100 * this.compute()).toFixed(3)}%`
+    formattedProbability() {
+      return `${this.probability.toFixed(this.precision)}%`
     },
   },
 
   methods: {
     compute() {
-      return 1 - Math.pow(Math.E, -this.exponent)
+      let exponent = (Math.pow(this.totalPeople, 2) - this.totalPeople) / (2 * this.totalDays)
+
+      return 1 - Math.pow(Math.E, -exponent)
     },
   },
 });
