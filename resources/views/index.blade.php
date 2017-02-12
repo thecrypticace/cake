@@ -5,8 +5,8 @@
         <div class="panel-heading">
             Birthday Problem
 
-            <a href="#" class="pull-right" @click.stop="toggleAdvancedOptions" v-if="advanced">Hide advanced options</a>
-            <a href="#" class="pull-right" @click.stop="toggleAdvancedOptions" v-if="! advanced">Show advanced options</a>
+            <a href="#" class="pull-right" @click.prevent="toggleAdvancedOptions" v-if="advanced">Hide advanced options</a>
+            <a href="#" class="pull-right" @click.prevent="toggleAdvancedOptions" v-if="! advanced">Show advanced options</a>
         </div>
 
         <div class="panel-body">
