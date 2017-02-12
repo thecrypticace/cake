@@ -12,19 +12,19 @@
         <div class="panel-body">
             <div class="form-group" v-if="false">
                 <label for="" class="control-label">Shared Birthdays</label>
-                <input type="number" class="form-control" v-model="sharedBirthdays">
+                <step-input v-model="sharedBirthdays"></step-input>
             </div>
             <div class="form-group">
                 <label for="" class="control-label">Total People</label>
-                <input type="number" class="form-control" v-model="totalPeople">
+                <step-input v-model="totalPeople"></step-input>
             </div>
             <div class="form-group">
                 <label for="" class="control-label">Number of Days</label>
-                <input type="number" class="form-control" v-model="totalDays">
+                <step-input v-model="totalDays"></step-input>
             </div>
             <div class="form-group" v-if="advanced">
                 <label for="" class="control-label">Precision</label>
-                <input type="number" class="form-control" v-model="precision">
+                <step-input v-model="precision"></step-input>
             </div>
         </div>
     </div>

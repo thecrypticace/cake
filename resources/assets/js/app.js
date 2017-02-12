@@ -1,5 +1,37 @@
 import Vue from "vue"
 
+Vue.component("step-input", {
+  template: `
+    <input
+      type="number"
+      class="form-control"
+      v-model="internal"
+    >
+  `,
+
+  props: ["value"],
+
+  data() {
+    return {
+      internal: 0,
+    }
+  },
+
+  created() {
+    this.internal = this.value
+  },
+
+  watch: {
+    internal() {
+      this.$emit("input", this.internal)
+    },
+
+    value(newValue) {
+      this.internal = newValue
+    },
+  },
+})
+
 const app = new Vue({
   el: '#app',
   data() {
