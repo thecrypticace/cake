@@ -58,7 +58,11 @@ const app = new Vue({
     },
 
     formattedProbability() {
-      return `${this.probability.toFixed(this.precision)}%`
+      try {
+        return `${this.probability.toFixed(this.precision)}%`
+      } catch (e) {
+        return `${this.probability.toFixed(20)}%`
+      }
     },
   },
 
