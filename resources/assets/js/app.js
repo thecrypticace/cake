@@ -4,12 +4,14 @@ Vue.component("step-input", {
   template: `
     <input
       type="number"
+      :min="min"
+      :max="max"
       class="form-control"
       v-model="internal"
     >
   `,
 
-  props: ["value"],
+  props: ["value", "min", "max"],
 
   data() {
     return {

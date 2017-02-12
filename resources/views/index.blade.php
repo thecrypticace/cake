@@ -24,7 +24,7 @@
             </div>
             <div class="form-group" v-if="advanced">
                 <label for="" class="control-label">Precision</label>
-                <step-input v-model="precision"></step-input>
+                <step-input v-model="precision" min="0" max="20"></step-input>
             </div>
         </div>
     </div>
