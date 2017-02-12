@@ -15,3 +15,11 @@ mix.js('resources/assets/js/app.js', 'public/js')
 mix.sass('resources/assets/sass/app.scss', 'public/css')
 mix.extract(['vue'])
 mix.version()
+
+mix.webpackConfig({
+  resolve: {
+    alias: {
+      "vue$": "vue/dist/vue.js"
+    }
+  }
+})
