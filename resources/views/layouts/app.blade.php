@@ -12,22 +12,21 @@
 
     <!-- Styles -->
     <link href="{{ mix("/css/app.css") }}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet">
 
     <!-- Scripts -->
-    <script>
+    <script defer>
         window.Laravel = {!! json_encode([
             'csrfToken' => csrf_token(),
         ]) !!};
     </script>
+    <script src="{{ mix("/js/manifest.js") }}" defer></script>
+    <script src="{{ mix("/js/vendor.js") }}" defer></script>
+    <script src="{{ mix("/js/app.js") }}" defer></script>
 </head>
 <body>
     <div id="app">
         @yield('content')
     </div>
-
-    <!-- Scripts -->
-    <script src="{{ mix("/js/manifest.js") }}"></script>
-    <script src="{{ mix("/js/vendor.js") }}"></script>
-    <script src="{{ mix("/js/app.js") }}"></script>
 </body>
 </html>
