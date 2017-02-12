@@ -29,7 +29,7 @@
   </div>
 
   <div class="panel panel-default">
-    <div class="panel-heading">
+    <div class="panel-body">
       <span class="result">{{ formattedProbability }}</span>
     </div>
   </div>
