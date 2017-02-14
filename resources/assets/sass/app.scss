@@ -4,6 +4,10 @@
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+body {
+    font-weight: 200;
+}
+
 .result {
     text-align: center;
     font-size: 3rem;
@@ -20,6 +24,10 @@ html, body {
     align-items: center;
     justify-content: center;
     height: 100%;
+}
+
+label {
+    font-weight: 600;
 }
 
 .panel {
