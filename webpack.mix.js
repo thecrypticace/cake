@@ -17,6 +17,7 @@ mix.extract(['vue'])
 mix.version()
 
 mix.options({
+  purifyCss: true,
   processCssUrls: false,
 })
 

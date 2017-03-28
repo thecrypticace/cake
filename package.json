@@ -13,6 +13,7 @@
   },
   "devDependencies": {
     "cross-env": "^3.2.3",
-    "laravel-mix": "^0.9.2"
+    "laravel-mix": "^0.9.2",
+    "purifycss-webpack": "^0.5.0"
   }
 }
