@@ -16,6 +16,10 @@ mix.sass('resources/assets/sass/app.scss', 'public/css')
 mix.extract(['vue'])
 mix.version()
 
+mix.options({
+  processCssUrls: false,
+})
+
 mix.webpackConfig({
   resolve: {
     alias: {
