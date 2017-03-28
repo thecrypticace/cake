@@ -23,7 +23,7 @@ mix.options({
 mix.webpackConfig({
   resolve: {
     alias: {
-      "vue$": "vue/dist/vue.js"
+      "vue$": "vue/dist/vue.runtime.esm.js"
     }
   }
 })
